@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Js Object and DOM</title>
+    </head>
+    <body>
+
+        <script>
+            //Let's create a js object
+            var student1 = {
+                //1.Property:Value
+                fname:"Gautam",
+                lname:"Sharma",
+                age:18,
+                address:"Neemuch",
+                //2. Functions
+                //Function Defination Area
+                getMyFullAddress (){
+                    //this is a reference to internal js object
+                    console.log("Hii "+ this.fname +" "+ this.lname +" "+ 'is' +" "+ this.age +" "+ 'years' +" "+ 'old' +" "+ 'from' +" "+this.address)
+                }
+
+            }; // student1 is a type of Js Object
+            var student2 = ""; // student2 is a type of Js String
+            var student3 = 10; // student3 is a type of Js Numbers
+
+            var student4 = {
+                //1.Property:Value
+                fname:"Virat",
+                lname:"Kohli",
+                age:34,
+                address:"Delhi",
+                //2. Functions
+                //every function return something
+                getAddress(){
+                    return this.address;
+                }
+            }
+
+
+            //How to access these information from Js Object
+
+            console.log(student1.fname,student1.lname)  //. is a member selection operator
+            console.log(student1.getMyFullAddress())  //Function Calling
+
+            console.log(student4.fname,student4.lname)
+            console.log(student4.getAddress())
+            
+                
+        </script>
+    </body>
+</html>
